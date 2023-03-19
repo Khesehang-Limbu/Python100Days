@@ -11,7 +11,6 @@ def random_member_generator():
 def compare_followers(user_guess, against):
     global total
     if (user_guess > against["follower_count"]):
-        os.system("cls")
         total += 1
         print(f"You're right, current score is {total}")
         return True
@@ -19,28 +18,33 @@ def compare_followers(user_guess, against):
         print(f"Sorry, that's wrong. Final Score : {total}")
         return False
     
-    
+print(logo)
 is_game_over = False
 A = random_member_generator()
 B = random_member_generator()
+if A == B:
+    B = random_member_generator()
 
 while not is_game_over:
-    print(logo)
     print(f'Compare A : {A["name"]}, a {A["description"]} from {A["country"]}')
     print(vs)
 
     print(f'Against B : {B["name"]}, a {B["description"]} from {B["country"]}')
     user_choice = input("Who has more followers? Type 'a' or 'b' : ").lower()
-    
     if (user_choice == 'a'):
         user_guess = A["follower_count"]
+        os.system("cls")
+        print(logo)
         if(compare_followers(user_guess, B) == False):
             is_game_over = True
         else:
-            A = A
+            A = B
             B = random_member_generator()
+            
     else:
         user_guess = B["follower_count"]
+        os.system("cls")
+        print(logo)
         if(compare_followers(user_guess, A) == False):
             is_game_over = True
         else:

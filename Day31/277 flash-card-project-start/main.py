@@ -43,7 +43,7 @@ def update_known():
     print(new_data_dict_df)
     update_word()
 
-
+ 
 window = Tk()
 window.title("Flash Card Application")
 window.config(padx=50, pady=50, background=BACKGROUND_COLOR)

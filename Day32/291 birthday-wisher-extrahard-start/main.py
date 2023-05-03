@@ -19,6 +19,7 @@ today_month = today.month
 today_day = today.day
 
 matched_person = [match for match in dates_dict if today_month == match["month"] and today_day == match["day"]]
+
 if len(matched_person) != 0:
     print(matched_person)
 

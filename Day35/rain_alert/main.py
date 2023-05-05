@@ -5,14 +5,13 @@ import os
 
 # To use environment variable, use os.environ.get("ENV_NAME")
 
-# API_KEY = "9e61eb2e259751589e81722acddc98d6"
-API_KEY = "69f04e4613056b159c2761a9d9e664d2"
+API_KEY = os.environ.get("API_KEY")
 MY_LAT = 27.717245
 MY_LONG = 85.323959
 
 # Twilio Credentials
 account_sid = "AC2249ed51b42ad63cbcd63a5e62b171f1"
-auth_token = "38e29116789e64d2425386b7f804c101"
+auth_token = os.environ.get("AUTH_TOKEN")
 
 # API_ENDPOINT = "https://api.openweathermap.org/data/2.5/weather"
 API_ENDPOINT = "https://api.openweathermap.org/data/2.5/onecall"
